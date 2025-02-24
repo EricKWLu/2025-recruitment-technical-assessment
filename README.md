@@ -1,5 +1,7 @@
 # DevSoc 2025 Subcommittee Recruitment Technical Assessment
 
+**I've only done the frontend problems
+
 Hiya!
 Thank you for applying to DevSoc project teams for 2025. Our projects are proudly maintained by student society volunteers like yourself who for many years have ideated, built and iterated the websites within our portfolios.
 
