@@ -1,6 +1,7 @@
 import { Box, Typography, Button } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import './header.css'
+import './header.css';
+import React, { useState } from "react";
 
 export const Header = () => {
     const buttonTheme = createTheme({
@@ -21,6 +22,15 @@ export const Header = () => {
             }
         }
     })
+    
+    const [isOpen, setIsOpen] = useState(true);
+
+    const openLogo = "../assets/freeRoomsLogo.png";
+    const closedLogo = "../assets/freeroomsDoorClosed.png";
+
+    const toggleImage = () => {
+        setIsOpen((prev) => !prev);
+    };
 
     return (
         <Box sx={{
@@ -39,12 +49,17 @@ export const Header = () => {
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <img 
                     className='mainLogo' 
-                    src='../assets/freeRoomsLogo.png' 
+                    src={isOpen ? openLogo : closedLogo}
+                    onClick={toggleImage}
                     alt='Freerooms Logo' 
                     style={{ height: '40px' }} 
                 />
-                <h2 className='headerText' 
-                style={{ marginLeft: '10px' , color: 'orange'}}>Freerooms</h2>
+                <h1 className='headerText' 
+                style={{ 
+                    marginLeft: '10px' , 
+                    color: 'orange', 
+                    fontFamily: "Roboto"
+                }}>Freerooms</h1>
             </Box>
 
             <Box sx={{

@@ -58,11 +58,9 @@ export const List = () =>{
     return (
         <Grid container spacing={4} sx={{ 
             padding: '16px',
-            paddingRight: '32px',
-            alignItems: 'center',
-            justifyContent: 'center' }}>
+            paddingRight: '32px', }}>
         {buildings.map((building, index) => (
-            <Grid item size={{ xs: 12, sm: 6, md: 4, lg: 2.4 }} key={index}>
+            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2.4 }} key={index}>
                 <Box
                     className='building-card'
                     sx={{
@@ -102,16 +100,18 @@ export const List = () =>{
                             color: 'black',
                             fontSize: '12px',
                             fontWeight: 'bold',
+                            fontFamily: 'Roboto'
                         }}> {building.rooms_available} rooms available </p>
                     </Box>
 
                     <Box sx = {{
-                        width: '90%',
+                        width: '100%',
                         height: '50px',
                         borderRadius: '10px',
                         backgroundColor: 'orange',
                         alignItems: 'center',
                         display: 'flex',
+                        fontFamily: 'Roboto'
                     }}>
                         <h3 style = {{
                             paddingLeft: '5%',

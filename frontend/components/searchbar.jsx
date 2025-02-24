@@ -69,7 +69,7 @@ export const Searchbar = () => {
                         position: 'absolute',
                         right: '10px'
                     }}>
-                        <span class='material-symbols-outlined'>
+                        <span className='material-symbols-outlined'>
                             filter_list
                         </span>
                         Sort
